@@ -1,0 +1,88 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/shop/mallItems/"}){ -->
+
+<form class="layui-form layui-form-pane" id="updateForm">
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">shopId</label>
+				<div class="layui-input-inline">
+					<input type="text" id="shopId" name="shopId"  value="${mallItems.shopId}"   class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">itemTypeId</label>
+				<div class="layui-input-inline">
+					<input type="text" id="itemTypeId" name="itemTypeId"  value="${mallItems.itemTypeId}"   class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">brandId</label>
+				<div class="layui-input-inline">
+					<input type="text" id="brandId" name="brandId"  value="${mallItems.brandId}"   class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">itemName</label>
+				<div class="layui-input-inline">
+					<input type="text" id="itemName" name="itemName"  value="${mallItems.itemName}"   class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">????</label>
+				<div class="layui-input-inline">
+					<input type="text" id="itemDesc" name="itemDesc"  value="${mallItems.itemDesc}"   class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">createTime</label>
+				<div class="layui-input-inline">
+					<input type="text" id="createTime" name="createTime"  value="${mallItems.createTime,"yyyy-MM-dd"}"   class="layui-input input-date" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">createBy</label>
+				<div class="layui-input-inline">
+					<input type="text" id="createBy" name="createBy"  value="${mallItems.createBy}"   class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">updateTime</label>
+				<div class="layui-input-inline">
+					<input type="text" id="updateTime" name="updateTime"  value="${mallItems.updateTime,"yyyy-MM-dd"}"   class="layui-input input-date" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">updateBy</label>
+				<div class="layui-input-inline">
+					<input type="text" id="updateBy" name="updateBy"  value="${mallItems.updateBy}"   class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+	<!-- 业务对象须有hidden字段，保存delFlag和version字段-->
+    <input type="hidden" name="itemId" value=${mallItems.itemId} />
+    <layui:submitButtons id="updateButton" />
+</form>
+<!--#} -->
+<script>
+layui.use(['edit'], function(){
+    var mallItemsEdit = layui.edit
+    mallItemsEdit.init();
+});
+</script>

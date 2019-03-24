@@ -1,0 +1,20 @@
+<!--#layout("/common/layout.html",{"jsBase":"/js/shop/mallItems/"}){ -->
+<layui:searchForm formId="searchForm"  condition="${search}">
+</layui:searchForm>
+
+<div class="layui-btn-group">
+    <layui:accessButton function="mallItems.add"  action="add">增加</layui:accessButton>
+    <layui:accessButton function="mallItems.edit"  action="edit">编辑</layui:accessButton>
+    <layui:accessButton function="mallItems.del"  action="del">删除</layui:accessButton>
+</div>
+
+<table id="mallItemsTable" lay-filter="mallItemsTable"></table>
+<!--#} -->
+<script>
+
+layui.use(['index'], function(){
+    var index = layui.index
+    index.init();
+});
+
+</script>

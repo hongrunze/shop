@@ -1,0 +1,86 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/shop/mallItems/"}){ -->
+
+<form class="layui-form layui-form-pane" id="addForm">
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">shopId</label>
+				<div class="layui-input-inline">
+					<input type="text" name="shopId" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">itemTypeId</label>
+				<div class="layui-input-inline">
+					<input type="text" name="itemTypeId" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">brandId</label>
+				<div class="layui-input-inline">
+					<input type="text" name="brandId" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">itemName</label>
+				<div class="layui-input-inline">
+					<input type="text" name="itemName" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">????</label>
+				<div class="layui-input-inline">
+					<input type="text" name="itemDesc" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">createTime</label>
+				<div class="layui-input-inline">
+					<input type="text" name="createTime" class="layui-input input-date" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">createBy</label>
+				<div class="layui-input-inline">
+					<input type="text" name="createBy" class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">updateTime</label>
+				<div class="layui-input-inline">
+					<input type="text" name="updateTime" class="layui-input input-date" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">updateBy</label>
+				<div class="layui-input-inline">
+					<input type="text" name="updateBy" class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <layui:submitButtons id="addButton" />
+</form>
+<!--#} -->
+<script>
+layui.use(['add'], function(){
+    var mallItemsAdd = layui.add
+    mallItemsAdd.init();
+});
+</script>
